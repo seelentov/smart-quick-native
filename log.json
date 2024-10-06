@@ -1,0 +1,1756 @@
+[
+      {
+        "rawScanRecord": "AgEaG/9MAAwOAJNFxol6c9j7ycQGg80QBm8dl66YeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAMDgCTRcaJenPY+8nEBoPNEAZvHZeumHg=",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -64,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "60:3A:2B:24:97:EE",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaG/9MAAwOAHIeyjKHg8RB9CcPek8QBk8dwdCBWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAMDgByHsoyh4PEQfQnD3pPEAZPHcHQgVg=",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -77,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "55:74:4A:4F:D0:13",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEGDQlTbWFydCBwYXNzZXICCgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": null,
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 9,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": "Smart passer",
+        "mtu": 23,
+        "rssi": -50,
+        "solicitedServiceUUIDs": null,
+        "localName": "Smart passer",
+        "id": "24:0A:C4:9A:63:26",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAC",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -70,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "DB:47:EC:B8:F2:00",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaAgoMDP9MABAHER/sbZ4QOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBxEf7G2eEDg=",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 12,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -70,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "43:00:67:11:2A:F5",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaF/9MAAkIE8TAqAA4G1gWCAATY2lQuuSHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAJCBPEwKgAOBtYFggAE2NpULrkhw==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -65,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "50:9E:05:34:F4:95",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaAgoMC/9MABAGRB3EmR4YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBkQdxJkeGA==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 12,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -64,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "7F:2E:A7:DA:21:D6",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaAgoMC/9MABAGRB30A58YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBkQd9AOfGA==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 12,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -54,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "71:6B:A8:E1:18:E8",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaDf9MABMIGilUkiuT2QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAATCBopVJIrk9kA",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -63,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "7F:32:05:3E:48:97",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaF/9MAAkIEwLAqABVG1gWCAAPaYd/zpYRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAJCBMCwKgAVRtYFggAD2mHf86WEQ==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -57,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "68:5E:C5:1B:FA:57",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAC",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -69,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "C3:35:16:19:EE:7B",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaCv9MABAFIJhlL4gCCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBSCYZS+I",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 0,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -59,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "5D:58:D7:75:43:3B",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaF/9MAAkIEwLAqAAbG1gWCAAWGyw4PUnMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAJCBMCwKgAGxtYFggAFhssOD1JzA==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -68,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "52:B9:C8:66:27:ED",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaG/9MAAwOAHIeyjKHg8RB9CcPek8QBk8dwdCBWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAMDgByHsoyh4PEQfQnD3pPEAZPHcHQgVg=",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -68,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "6B:5D:42:34:55:2E",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaAgoHDP9MABAHMh+4tRBFGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBzIfuLUQRRg=",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 7,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -74,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "71:43:0A:73:78:4D",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaAgoMC/9MABAGRB30A58YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAQBkQd9AOfGA==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": 12,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -62,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "6C:54:9D:37:F7:54",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "Gv9MABICbgMHEQZug1SssdO05j9PhZDdtBkbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAm4DBxEGboNUrLHTtOY/T4WQ3bQZGw==",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": true,
+        "name": null,
+        "mtu": 23,
+        "rssi": -85,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "D5:5A:6A:63:61:8C",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AwPz/h4W8/5KFyNHVkdCETKE5MCVcGq5z2s81RNObcSs01YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": [
+          "0000fef3-0000-1000-8000-00805f9b34fb"
+       
+        ],
+        "manufacturerData": null,
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": {
+          "0000fef3-0000-1000-8000-00805f9b34fb": "ShcjR1ZHQhEyhOTAlXBquc9rPNUTTm3ErNNW"
+       
+        },
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -94,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "56:DF:0D:42:3C:DD",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "AgEaDf9MABYIAGq5hcZNQawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAAWCABquYXGTUGs",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -74,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "71:8B:6B:AE:4C:2E",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAC",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -69,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "C2:BC:3A:3B:51:DA",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAD",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -89,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "E0:7E:99:E0:2F:F1",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAC",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -52,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "D9:DE:29:A8:AD:97",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    },
+      {
+        "rawScanRecord": "B/9MABICAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "serviceUUIDs": null,
+        "manufacturerData": "TAASAgAB",
+        "overflowServiceUUIDs": null,
+        "txPowerLevel": null,
+        "serviceData": null,
+        "isConnectable": false,
+        "name": null,
+        "mtu": 23,
+        "rssi": -76,
+        "solicitedServiceUUIDs": null,
+        "localName": null,
+        "id": "D5:BB:FE:DC:55:67",
+        "_manager": {
+          "_eventEmitter": {
+            "_nativeModule": {
+              "StateChangeEvent": "StateChangeEvent",
+              "RestoreStateEvent": "RestoreStateEvent",
+              "ScanEvent": "ScanEvent",
+              "DisconnectionEvent": "DisconnectionEvent",
+              "ReadEvent": "ReadEvent"
+           
+                }
+         
+            },
+          "_uniqueId": 1,
+          "_activePromises": {},
+          "_activeSubscriptions": {},
+          "_errorCodesToMessagesMapping": {
+            "0": "Unknown error occurred. This is probably a bug! Check reason property.",
+            "1": "BleManager was destroyed",
+            "2": "Operation was cancelled",
+            "3": "Operation timed out",
+            "4": "Operation was rejected",
+            "5": "Invalid UUIDs or IDs were passed: {internalMessage}",
+            "100": "BluetoothLE is unsupported on this device",
+            "101": "Device is not authorized to use BluetoothLE",
+            "102": "BluetoothLE is powered off",
+            "103": "BluetoothLE is in unknown state",
+            "104": "BluetoothLE is resetting",
+            "105": "Bluetooth state change failed",
+            "200": "Device {deviceID} connection failed",
+            "201": "Device {deviceID} was disconnected",
+            "202": "RSSI read failed for device {deviceID}",
+            "203": "Device {deviceID} is already connected",
+            "204": "Device {deviceID} not found",
+            "205": "Device {deviceID} is not connected",
+            "206": "Device {deviceID} could not change MTU size",
+            "300": "Services discovery failed for device {deviceID}",
+            "301": "Included services discovery failed for device {deviceID} and service: {serviceUUID}",
+            "302": "Service {serviceUUID} for device {deviceID} not found",
+            "303": "Services not discovered for device {deviceID}",
+            "400": "Characteristic discovery failed for device {deviceID} and service {serviceUUID}",
+            "401": "Characteristic {characteristicUUID} write failed for device {deviceID} and service {serviceUUID}",
+            "402": "Characteristic {characteristicUUID} read failed for device {deviceID} and service {serviceUUID}",
+            "403": "Characteristic {characteristicUUID} notify change failed for device {deviceID} and service {serviceUUID}",
+            "404": "Characteristic {characteristicUUID} not found",
+            "405": "Characteristics not discovered for device {deviceID} and service {serviceUUID}",
+            "406": "Cannot write to characteristic {characteristicUUID} with invalid data format: {internalMessage}",
+            "500": "Descriptor {descriptorUUID} discovery failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "501": "Descriptor {descriptorUUID} write failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "502": "Descriptor {descriptorUUID} read failed for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "503": "Descriptor {descriptorUUID} not found",
+            "504": "Descriptors not discovered for device {deviceID}, service {serviceUUID} and characteristic {characteristicUUID}",
+            "505": "Cannot write to descriptor {descriptorUUID} with invalid data format: {internalMessage}",
+            "506": "Cannot write to descriptor {descriptorUUID}. It's not allowed by iOS and therefore forbidden on Android as well.",
+            "600": "Cannot start scanning operation",
+            "601": "Location services are disabled"
+         
+            },
+          "_scanEventSubscription": {}
+       
+        }
+     
+    }
+]

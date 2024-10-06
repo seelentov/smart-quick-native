@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "noEmit": true,
+    "target": "es6",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@router": [
+        "src/Router.tsx"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@lang/*": [
+        "src/lang*"
+      ],
+      "@screens/*": [
+        "src/screens*"
+      ],
+      "@styles/*": [
+        "src/styles*"
+      ],
+      "@config/*": [
+        "src/core/config/*"
+      ],
+      "@consts/*": [
+        "src/core/consts/*"
+      ],
+      "@hooks/*": [
+        "src/core/hooks*"
+      ],
+      "@store/*": [
+        "src/core/store*"
+      ],
+      "@types/*": [
+        "src/core/types*"
+      ],
+      "@utils/*": [
+        "src/core/utils*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "expo/tsconfig.base"
+}
