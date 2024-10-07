@@ -1,16 +1,13 @@
 /* eslint-disable no-bitwise */
 import { useMemo, useState } from "react";
-import { Alert, PermissionsAndroid, Platform } from "react-native";
+import { PermissionsAndroid, Platform } from "react-native";
 import {
-    BleError,
     BleManager,
-    Characteristic,
     Device,
 } from "react-native-ble-plx";
 
 import * as ExpoDevice from "expo-device";
 
-import base64 from "react-native-base64";
 import { btoa } from "react-native-quick-base64";
 interface BluetoothLowEnergyApi {
     requestPermissions(): Promise<boolean>;
