@@ -22,7 +22,6 @@ interface BluetoothLowEnergyApi {
     heartRate: number;
     writeCharacteristicWithResponseForService: (value: string) => void;
     scanAndConnect: (name: string) => Promise<void>;
-    scanAndConnectByService: () => Promise<void>
 }
 
 function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnergyApi {
@@ -93,7 +92,7 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
     const scanForPeripherals = () =>
         bleManager.startDeviceScan(null, null, (error, device) => {
             if (error) {
-                Alert.alert("scanForPeripherals__ERR", JSON.stringify(error));
+                console.log("scanForPeripherals__ERR", JSON.stringify(error));
             }
             if (device) {
                 setAllDevices((prevState: Device[]) => {
@@ -105,42 +104,35 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
             }
         });
 
-    const scanAndConnect = async (name: string) =>
-        bleManager.startDeviceScan(null, null, (error, device) => {
+    const scanAndConnect = async (name: string) => {
+
+        if (connectedDevice && connectedDevice.name === name) {
+            return
+        }
+
+        bleManager.startDeviceScan(null, null, async (error, device) => {
             if (error) {
-                Alert.alert("scanAndConnect__ERR", JSON.stringify(error));
+                console.log("scanForPeripherals__ERR", JSON.stringify(error));
             }
-            if (device && name && device.name === name) {
-                bleManager.stopDeviceScan();
+            if (device && device.name === name) {
                 connectToDevice(device)
-            }
-            else {
-                Alert.alert("scanAndConnect__ERR", `Not find ${name}`);
+                bleManager.stopDeviceScan();
             }
         });
-    const scanAndConnectByService = async () =>
-        bleManager.startDeviceScan([SERVICE_UUID], null, (error, device) => {
-            if (error) {
-                Alert.alert("scanAndConnectByService__ERR", JSON.stringify(error));
-            }
-            if (device) {
-                bleManager.stopDeviceScan();
-                connectToDevice(device)
-            }
-            else {
-                Alert.alert("scanAndConnectByService__ERR", `Not find ${SERVICE_UUID}`);
-            }
-        });
+    }
 
     const connectToDevice = async (device: Device) => {
         try {
+            if (connectedDevice) {
+                disconnectFromDevice()
+            }
+
             const deviceConnection = await bleManager.connectToDevice(device.id);
             const check = await deviceConnection.discoverAllServicesAndCharacteristics();
             setConnectedDevice(check);
             bleManager.stopDeviceScan();
-            startStreamingData(deviceConnection);
         } catch (e) {
-            Alert.alert("FAILED TO CONNECT", JSON.stringify(e));
+            console.log("FAILED TO CONNECT", JSON.stringify(e));
         }
     };
 
@@ -152,44 +144,6 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
         }
     };
 
-    const onHeartRateUpdate = (
-        error: BleError | null,
-        characteristic: Characteristic | null
-    ) => {
-        if (error) {
-            return -1;
-        } else if (!characteristic?.value) {
-            return -1;
-        }
-
-        const rawData = base64.decode(characteristic.value);
-        let innerHeartRate: number = -1;
-
-        const firstBitValue: number = Number(rawData) & 0x01;
-
-        if (firstBitValue === 0) {
-            innerHeartRate = rawData[1].charCodeAt(0);
-        } else {
-            innerHeartRate =
-                Number(rawData[1].charCodeAt(0) << 8) +
-                Number(rawData[2].charCodeAt(2));
-        }
-
-        setHeartRate(innerHeartRate);
-    };
-
-    const startStreamingData = async (device: Device) => {
-        if (device) {
-            device.monitorCharacteristicForService(
-                SERVICE_UUID,
-                CHARACTERISTIC,
-                onHeartRateUpdate
-            );
-        } else {
-            Alert.alert("startStreamingData__ERR", "No Device Connected");
-        }
-    };
-
     const writeCharacteristicWithResponseForService = (value: string) => {
         if (connectedDevice) {
             connectedDevice.writeCharacteristicWithResponseForService(
@@ -197,13 +151,14 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
                 CHARACTERISTIC,
                 btoa(value)
             ).catch((e) => {
-                Alert.alert("writeCharacteristicWithResponseForService__ERR", JSON.stringify(e));
+                console.log("writeCharacteristicWithResponseForService__ERR", JSON.stringify(e));
             })
         }
         else {
-            Alert.alert("writeCharacteristicWithResponseForService__ERR", "No Device Connected");
+            console.log("writeCharacteristicWithResponseForService__ERR", "No Device Connected");
         }
     }
+
 
     return {
         scanForPeripherals,
@@ -214,8 +169,7 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
         disconnectFromDevice,
         heartRate,
         writeCharacteristicWithResponseForService,
-        scanAndConnect,
-        scanAndConnectByService
+        scanAndConnect
     };
 }
 

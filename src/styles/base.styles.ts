@@ -2,7 +2,7 @@ import { Dimensions, StyleSheet } from 'react-native';
 
 const { height } = Dimensions.get('window');
 const headerHeight = 50
-const footerHeight = 50
+const footerHeight = 80
 
 export const baseStyles = StyleSheet.create({
     wrapper: {

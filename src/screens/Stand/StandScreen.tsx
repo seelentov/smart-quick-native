@@ -2,12 +2,13 @@ import { NavigationScreenProps } from '../../Router';
 import { Alert, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { baseStyles } from '../../styles/base.styles';
 import Header from '../../components/ui/Header/Header';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Appbar, Button, Divider, Text } from 'react-native-paper';
 import Slider from '@react-native-community/slider';
 import theme from '@config/theme';
 import Loading from '@components/ui/Loading/Loading';
 import useBLE from '@hooks//useBLE';
+import { DataContext } from '@components/providers/DataProvider';
 
 type StandScreenProps = NavigationScreenProps<"Stand">;
 
@@ -15,45 +16,48 @@ const CHARACTERISTIC_UUID = "89e2b429-2cd9-44d3-a169-2ec392e1c6f8";
 
 export default function StandScreen({ navigation, route }: StandScreenProps) {
 
-    const stand = route.params;
+    const { data } = useContext(DataContext);
 
-    const { requestPermissions, connectToDevice, writeCharacteristicWithResponseForService, connectedDevice, scanForPeripherals, allDevices, disconnectFromDevice } = useBLE(stand.id, CHARACTERISTIC_UUID)
+
+    const stand =
+        route?.params ||
+        data[0] ||
+        {
+            id: "null",
+            name: "null",
+            deviceid: 1
+        };
+
+    const { requestPermissions, writeCharacteristicWithResponseForService, connectedDevice, scanAndConnect } = useBLE(stand.id, CHARACTERISTIC_UUID)
 
     const [intervalRange, setIntervalRange] = useState<number>(2)
     const [speedRange, setSpeedRange] = useState<number>(0)
-    const [intervalState, setIntervalState] = useState<number>(-1)
 
     const [connectionStatus, setConnectionStatus] = useState("Поиск...");
 
-
-    const searchDevices = async () => {
-        const isRequestPermissions = await requestPermissions();
-
-        if (isRequestPermissions) {
-            scanForPeripherals()
-        }
-    }
-
     useEffect(() => {
-        setConnectionStatus("Поиск...")
-        searchDevices().catch(() => setConnectionStatus("Ошибка при поиске"))
-    }, [])
+        setConnectionStatus(stand.name)
+        const searchDevice = async () => {
+            const isRequestPermissions = await requestPermissions();
 
-    useEffect(() => {
-        if (!connectedDevice) {
-            const thisDevice = allDevices.find(d => d.name === "Smart passer")
-            if (thisDevice) {
-                setConnectionStatus("Подключение")
-                connectToDevice(thisDevice)
+            if (isRequestPermissions) {
+                setConnectionStatus("Поиск...")
+                await scanAndConnect("Smart passer")
                     .then(() => {
                         setConnectionStatus(stand.name)
                     })
                     .catch(() => {
-                        setConnectionStatus("Ошибка при подключении")
+                        Alert.alert("Ошибка", "Тренажер не подключен")
+                        setConnectionStatus("Ошибка")
                     })
+            } else {
+                Alert.alert("Ошибка", "Ошибка при получении разрешений устройства")
+                setConnectionStatus("Ошибка")
             }
         }
-    }, [allDevices])
+
+        searchDevice()
+    }, [stand])
 
 
     const handleSendCommand = (command: number, attribute: number = 0) => {
@@ -62,23 +66,11 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
         attribute = command === 5 ? attribute - 2 : attribute
 
         writeCharacteristicWithResponseForService(String(commandString))
-
-        if (command === 5) {
-            setIntervalState(attribute + 2)
-        }
-
-        if (command === 6) {
-            setIntervalState(0)
-        }
     }
 
     return (
         <View style={baseStyles.wrapper}>
-            <Header title={connectionStatus} navigation={navigation} additional={
-                <>
-                    {connectedDevice && <Appbar.Action color={'red'} icon="stop-circle" onPress={() => handleSendCommand(7)} />}
-                </>
-            } />
+            <Header title={connectionStatus} navigation={navigation} />
             <ScrollView style={baseStyles.scrollView}>
                 {connectedDevice ?
                     <>
@@ -113,33 +105,24 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
                         </View>
                         <Divider />
                         <View style={styles.container}>
-                            {intervalState < 0 ?
-                                <>
-                                    <Text style={styles.text}>Запуск с интервалом: {intervalRange} сек</Text>
-                                    <Slider
-                                        style={{ height: 40 }}
-                                        minimumValue={2}
-                                        maximumValue={10}
-                                        minimumTrackTintColor={theme.colors.primary}
-                                        maximumTrackTintColor="#000000"
-                                        thumbTintColor={theme.colors.primary}
-                                        onValueChange={setIntervalRange}
-                                        value={intervalRange}
-                                        step={1}
-                                    />
-                                    <Button mode="contained" onPress={() => handleSendCommand(5, intervalRange)}>
-                                        Запустить
-                                    </Button>
-                                </>
-                                : intervalState === 0 ?
-                                    <Text style={styles.text}>Запуск!</Text>
-                                    : <>
-                                        <Text style={styles.text}>Запуск через: {intervalState} сек</Text>
-                                        <Button mode="contained" onPress={() => handleSendCommand(6)}>
-                                            Остановить интервал
-                                        </Button>
-                                    </>}
-
+                            <Text style={styles.text}>Запуск с интервалом: {intervalRange} сек</Text>
+                            <Slider
+                                style={{ height: 40 }}
+                                minimumValue={2}
+                                maximumValue={10}
+                                minimumTrackTintColor={theme.colors.primary}
+                                maximumTrackTintColor="#000000"
+                                thumbTintColor={theme.colors.primary}
+                                onValueChange={setIntervalRange}
+                                value={intervalRange}
+                                step={1}
+                            />
+                            <Button mode="contained" onPress={() => handleSendCommand(6)}>
+                                Запустить
+                            </Button>
+                            <Button mode="contained" onPress={() => handleSendCommand(6)}>
+                                Остановить
+                            </Button>
                         </View>
                         <Divider />
                         <View style={styles.container}>
@@ -156,9 +139,6 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
 
                     </> :
                     <Loading minimal />}
-                <Divider style={{ margin: 20 }} />
-                <Text>{stand.id} |  {stand.deviceid}</Text>
-                <Text>{stand.name}</Text>
             </ScrollView>
         </View>
     );

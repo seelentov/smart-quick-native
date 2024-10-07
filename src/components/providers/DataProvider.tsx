@@ -5,28 +5,23 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export const baseData: IStand[] = [
   {
     id: "5ffe7774-1493-4cab-bc98-aa651adee9dd",
-    name: "Smart passer",
+    name: "Стенд 1",
     deviceid: 1
   },
   {
     id: "8460efe4-415a-4895-944c-57cd8dd5be19",
-    name: "Smart passer",
+    name: "Стенд 2",
     deviceid: 2
   },
   {
     id: "97ed1dd9-fd86-47d1-9362-573adee8d807",
-    name: "Smart passer",
+    name: "Стенд 3",
     deviceid: 3
   },
   {
     id: "11de058b-2be0-460c-a196-0a75c4984320",
-    name: "Smart passer",
+    name: "Стенд 4",
     deviceid: 4
-  },
-  {
-    id: "11de058b-2be0-460c-a196-0a75c4984320",
-    name: "Smart passer",
-    deviceid: 9
   },
 ]
 

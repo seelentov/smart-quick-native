@@ -1,5 +1,5 @@
 import { createNativeStackNavigator, NativeStackNavigationProp, NativeStackScreenProps } from '@react-navigation/native-stack';
-import { StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import theme from './core/config/theme';
 import SettingsScreen from './screens/Settings/SettingsScreen';
 import StandScreen from './screens/Stand/StandScreen';
@@ -26,13 +26,13 @@ export default function Router() {
         <>
             <Stack.Navigator>
                 <Stack.Screen
-                    name="Settings"
-                    component={SettingsScreen}
+                    name="Stand"
+                    component={StandScreen}
                     options={defaultOptions}
                 />
                 <Stack.Screen
-                    name="Stand"
-                    component={StandScreen}
+                    name="Settings"
+                    component={SettingsScreen}
                     options={defaultOptions}
                 />
             </Stack.Navigator>
