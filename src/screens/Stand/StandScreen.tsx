@@ -2,7 +2,7 @@ import { NavigationScreenProps } from '../../Router';
 import { Alert, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { baseStyles } from '../../styles/base.styles';
 import Header from '../../components/ui/Header/Header';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { Appbar, Button, Divider, Text } from 'react-native-paper';
 import Slider from '@react-native-community/slider';
 import theme from '@config/theme';
@@ -16,19 +16,9 @@ const CHARACTERISTIC_UUID = "89e2b429-2cd9-44d3-a169-2ec392e1c6f8";
 
 export default function StandScreen({ navigation, route }: StandScreenProps) {
 
-    const { data } = useContext(DataContext);
+    const stand = route.params
 
-
-    const stand =
-        route?.params ||
-        data[0] ||
-        {
-            id: "null",
-            name: "null",
-            deviceid: 1
-        };
-
-    const { requestPermissions, writeCharacteristicWithResponseForService, connectedDevice, scanAndConnect } = useBLE(stand.id, CHARACTERISTIC_UUID)
+    const { requestPermissions, writeCharacteristicWithResponseForServiceList, connectedDevicesList, scanAndConnectList } = useBLE(stand.id, CHARACTERISTIC_UUID)
 
     const [intervalRange, setIntervalRange] = useState<number>(2)
     const [speedRange, setSpeedRange] = useState<number>(0)
@@ -37,12 +27,24 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
 
     useEffect(() => {
         setConnectionStatus(stand.name)
+    }, [stand])
+
+    useEffect(() => {
         const searchDevice = async () => {
             const isRequestPermissions = await requestPermissions();
 
             if (isRequestPermissions) {
                 setConnectionStatus("Поиск...")
-                await scanAndConnect("Smart passer")
+                // await scanAndConnectList("Smart passer")
+                //     .then(() => {
+                //         setConnectionStatus(stand.name)
+                //     })
+                //     .catch(() => {
+                //         Alert.alert("Ошибка", "Тренажер не подключен")
+                //         setConnectionStatus("Ошибка")
+                //     })
+
+                await scanAndConnectList("Smart passer")
                     .then(() => {
                         setConnectionStatus(stand.name)
                     })
@@ -50,6 +52,7 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
                         Alert.alert("Ошибка", "Тренажер не подключен")
                         setConnectionStatus("Ошибка")
                     })
+
             } else {
                 Alert.alert("Ошибка", "Ошибка при получении разрешений устройства")
                 setConnectionStatus("Ошибка")
@@ -57,22 +60,23 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
         }
 
         searchDevice()
-    }, [stand])
+    }, [])
 
 
-    const handleSendCommand = (command: number, attribute: number = 0) => {
-        const commandString = `${stand.deviceid}${command}${attribute}3e7f6c`
+    const handleSendCommand = async (command: number, attribute: number = 0) => {
 
         attribute = command === 5 ? attribute - 2 : attribute
 
-        writeCharacteristicWithResponseForService(String(commandString))
+        const commandString = `${stand.deviceid}${command}${attribute}3e7f6c`
+
+        await writeCharacteristicWithResponseForServiceList(String(commandString))
     }
 
     return (
         <View style={baseStyles.wrapper}>
             <Header title={connectionStatus} navigation={navigation} />
             <ScrollView style={baseStyles.scrollView}>
-                {connectedDevice ?
+                {connectedDevicesList.length > 0 ?
                     <>
                         <View style={styles.container}>
                             <Text style={styles.text}>Моторы выброса</Text>
@@ -117,7 +121,7 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
                                 value={intervalRange}
                                 step={1}
                             />
-                            <Button mode="contained" onPress={() => handleSendCommand(6)}>
+                            <Button mode="contained" onPress={() => handleSendCommand(5, intervalRange)}>
                                 Запустить
                             </Button>
                             <Button mode="contained" onPress={() => handleSendCommand(6)}>

@@ -1,5 +1,6 @@
 import { createContext, PropsWithChildren, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { CommonActions, NavigationProp, ParamListBase, useNavigation } from '@react-navigation/native';
 
 
 export const baseData: IStand[] = [
@@ -40,6 +41,8 @@ export const DataProvider = ({ children }: PropsWithChildren) => {
 
   const [data, setDataState] = useState<IStand[]>([])
 
+  const navigation: NavigationProp<ParamListBase> = useNavigation()
+
   useEffect(() => {
     const getDataFromLocalStorage = async () => {
 
@@ -50,6 +53,9 @@ export const DataProvider = ({ children }: PropsWithChildren) => {
       } else {
         setDataState(baseData)
       }
+
+      navigation.navigate("Stand", data[0]);
+
     }
 
     getDataFromLocalStorage()

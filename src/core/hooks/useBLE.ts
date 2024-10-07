@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PermissionsAndroid, Platform } from "react-native";
 import {
     BleManager,
@@ -15,10 +15,13 @@ interface BluetoothLowEnergyApi {
     connectToDevice: (deviceId: Device) => Promise<void>;
     disconnectFromDevice: () => void;
     connectedDevice: Device | null;
+    connectedDevicesList: Device[]
     allDevices: Device[];
     heartRate: number;
     writeCharacteristicWithResponseForService: (value: string) => void;
+    writeCharacteristicWithResponseForServiceList: (value: string) => Promise<void>;
     scanAndConnect: (name: string) => Promise<void>;
+    scanAndConnectList: (name: string) => Promise<void>;
 }
 
 function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnergyApi {
@@ -26,6 +29,8 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
     const [allDevices, setAllDevices] = useState<Device[]>([]);
     const [connectedDevice, setConnectedDevice] = useState<Device | null>(null);
     const [heartRate, setHeartRate] = useState<number>(0);
+    const [connectedDevicesList, setConnectedDevicesList] = useState<Device[]>([])
+    const [connectedDevicesListTemp, setConnectedDevicesListTemp] = useState<Device[]>([])
 
     const requestAndroid31Permissions = async () => {
         const bluetoothScanPermission = await PermissionsAndroid.request(
@@ -118,6 +123,36 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
         });
     }
 
+    const scanAndConnectList = async (name: string) => {
+        bleManager.startDeviceScan(null, null, (error, device) => {
+            if (error) {
+                console.log("scanForPeripherals__ERR", JSON.stringify(error));
+            }
+            if (device && device.name === name && !isDuplicteDevice(connectedDevicesListTemp, device)) {
+                setConnectedDevicesListTemp(prevState => [...prevState, device]);
+            }
+        });
+    }
+
+    useEffect(() => {
+        const connectToConnectedDevicesList = async () => {
+            setTimeout(async () => {
+                const connectedDeviceIds = new Set();
+                for (let i = 0; i < connectedDevicesListTemp.length; i++) {
+                    const device = connectedDevicesListTemp[i];
+                    if (!connectedDeviceIds.has(device.id) && !(await bleManager.isDeviceConnected(device.id))) {
+                        const deviceConnection = await bleManager.connectToDevice(device.id);
+                        const deviceDiscovered = await deviceConnection.discoverAllServicesAndCharacteristics();
+                        setConnectedDevicesList(prevState => [...prevState, deviceDiscovered]);
+                        connectedDeviceIds.add(device.id);
+                    }
+                }
+            }, 0);
+        };
+
+        connectToConnectedDevicesList();
+    }, [connectedDevicesListTemp]);
+
     const connectToDevice = async (device: Device) => {
         try {
             if (connectedDevice) {
@@ -156,6 +191,36 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
         }
     }
 
+    const writeCharacteristicWithResponseForServiceList = async (value: string) => {
+        console.log("connectedDevicesList", JSON.stringify(connectedDevicesList));
+
+        let isSended = false;
+
+        if (connectedDevicesList.length > 0) {
+
+            for (let i = 0; i < connectedDevicesList.length; i++) {
+                const device = connectedDevicesList[i];
+                if (isSended) {
+                    break;
+                }
+
+                await device.writeCharacteristicWithResponseForService(
+                    SERVICE_UUID,
+                    CHARACTERISTIC,
+                    btoa(value)
+                ).then(() => {
+                    console.log("writeCaracterhisticWithResponseForService__OK", JSON.stringify(device));
+                    isSended = true
+                }).catch((e) => {
+                    console.log("writeCharacteristicWithResponseForService__ERR", JSON.stringify(e));
+                })
+            }
+        }
+        else {
+            console.log("writeCharacteristicWithResponseForService__ERR", "No Device Connected");
+        }
+    }
+
 
     return {
         scanForPeripherals,
@@ -163,10 +228,13 @@ function useBLE(SERVICE_UUID: string, CHARACTERISTIC: string): BluetoothLowEnerg
         connectToDevice,
         allDevices,
         connectedDevice,
+        connectedDevicesList,
         disconnectFromDevice,
         heartRate,
         writeCharacteristicWithResponseForService,
-        scanAndConnect
+        scanAndConnect,
+        scanAndConnectList,
+        writeCharacteristicWithResponseForServiceList
     };
 }
 

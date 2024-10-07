@@ -48,6 +48,7 @@ export default function SettingsScreen({ navigation }: SettingsScreenProps) {
         <View style={baseStyles.wrapper}>
             <Header title={"Настройки"} navigation={navigation} />
             <ScrollView style={baseStyles.scrollView}>
+
                 <List.Section style={{ gap: 10 }}>
                     {devicesForm.map((device, index) => (
                         <View key={device.id + device.deviceid}>
