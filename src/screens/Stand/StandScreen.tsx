@@ -16,9 +16,19 @@ const CHARACTERISTIC_UUID = "89e2b429-2cd9-44d3-a169-2ec392e1c6f8";
 
 export default function StandScreen({ navigation, route }: StandScreenProps) {
 
-    const stand = route.params
+    const { data } = useContext(DataContext);
 
-    const { requestPermissions, writeCharacteristicWithResponseForServiceList, connectedDevicesList, scanAndConnectList } = useBLE(stand.id, CHARACTERISTIC_UUID)
+    const [stand, setStand] = useState<IStand>(data[0])
+
+    useEffect(() => {
+        if (route?.params) {
+            setStand(route?.params)
+        } else if (data) {
+            setStand(data[0])
+        }
+    }, [route, data])
+
+    const { requestPermissions, writeCharacteristicWithResponseForService, connectedDevice, scanAndConnectByService } = useBLE(stand?.id || "null", CHARACTERISTIC_UUID)
 
     const [intervalRange, setIntervalRange] = useState<number>(2)
     const [speedRange, setSpeedRange] = useState<number>(0)
@@ -26,7 +36,9 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
     const [connectionStatus, setConnectionStatus] = useState("Поиск...");
 
     useEffect(() => {
-        setConnectionStatus(stand.name)
+        if (stand) {
+            setConnectionStatus(stand.name)
+        }
     }, [stand])
 
     useEffect(() => {
@@ -35,24 +47,16 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
 
             if (isRequestPermissions) {
                 setConnectionStatus("Поиск...")
-                // await scanAndConnectList("Smart passer")
-                //     .then(() => {
-                //         setConnectionStatus(stand.name)
-                //     })
-                //     .catch(() => {
-                //         Alert.alert("Ошибка", "Тренажер не подключен")
-                //         setConnectionStatus("Ошибка")
-                //     })
-
-                await scanAndConnectList("Smart passer")
+                await scanAndConnectByService()
                     .then(() => {
-                        setConnectionStatus(stand.name)
+                        if (stand) {
+                            setConnectionStatus(stand.name)
+                        }
                     })
                     .catch(() => {
                         Alert.alert("Ошибка", "Тренажер не подключен")
                         setConnectionStatus("Ошибка")
                     })
-
             } else {
                 Alert.alert("Ошибка", "Ошибка при получении разрешений устройства")
                 setConnectionStatus("Ошибка")
@@ -60,89 +64,93 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
         }
 
         searchDevice()
-    }, [])
+    }, [stand])
 
 
-    const handleSendCommand = async (command: number, attribute: number = 0) => {
+    const handleSendCommand = (command: number, attribute: number = 0) => {
 
         attribute = command === 5 ? attribute - 2 : attribute
 
-        const commandString = `${stand.deviceid}${command}${attribute}3e7f6c`
+        const commandString = `${stand?.deviceid}${command}${attribute}3e7f6c`
 
-        await writeCharacteristicWithResponseForServiceList(String(commandString))
+        writeCharacteristicWithResponseForService(String(commandString))
     }
 
     return (
         <View style={baseStyles.wrapper}>
             <Header title={connectionStatus} navigation={navigation} />
             <ScrollView style={baseStyles.scrollView}>
-                {connectedDevicesList.length > 0 ?
-                    <>
-                        <View style={styles.container}>
-                            <Text style={styles.text}>Моторы выброса</Text>
-                            <View style={styles.row}>
-                                <Button mode="contained" onPress={() => handleSendCommand(2)}>
+                {
+                    connectedDevice
+                        // true
+                        ?
+                        <>
+                            <View style={styles.container}>
+                                <Text style={styles.text}>Моторы выброса</Text>
+                                <View style={styles.row}>
+                                    <Button mode="contained" onPress={() => handleSendCommand(2)}>
+                                        Запустить
+                                    </Button>
+                                    <Button mode="contained" onPress={() => handleSendCommand(4)}>
+                                        Остановить
+                                    </Button>
+                                </View>
+                            </View>
+                            <Divider />
+                            <View style={styles.container}>
+                                <Text style={styles.text}>Скорость: {speedRange}</Text>
+                                <Slider
+                                    style={{ height: 40 }}
+                                    minimumValue={0}
+                                    maximumValue={7}
+                                    minimumTrackTintColor={theme.colors.primary}
+                                    maximumTrackTintColor="#000000"
+                                    thumbTintColor={theme.colors.primary}
+                                    onValueChange={setSpeedRange}
+                                    value={speedRange}
+                                    step={1}
+                                />
+                                <Button mode="contained" onPress={() => handleSendCommand(1, speedRange)}>
+                                    Установить скорость
+                                </Button>
+                            </View>
+                            <Divider />
+                            <View style={styles.container}>
+                                <Text style={styles.text}>Запуск с интервалом: {intervalRange} сек</Text>
+                                <Slider
+                                    style={{ height: 40 }}
+                                    minimumValue={2}
+                                    maximumValue={10}
+                                    minimumTrackTintColor={theme.colors.primary}
+                                    maximumTrackTintColor="#000000"
+                                    thumbTintColor={theme.colors.primary}
+                                    onValueChange={setIntervalRange}
+                                    value={intervalRange}
+                                    step={1}
+                                />
+                                <Button mode="contained" onPress={() => handleSendCommand(5, intervalRange)}>
                                     Запустить
                                 </Button>
-                                <Button mode="contained" onPress={() => handleSendCommand(4)}>
+                                <Button mode="contained" onPress={() => handleSendCommand(6)}>
                                     Остановить
                                 </Button>
                             </View>
-                        </View>
-                        <Divider />
-                        <View style={styles.container}>
-                            <Text style={styles.text}>Скорость: {speedRange}</Text>
-                            <Slider
-                                style={{ height: 40 }}
-                                minimumValue={0}
-                                maximumValue={7}
-                                minimumTrackTintColor={theme.colors.primary}
-                                maximumTrackTintColor="#000000"
-                                thumbTintColor={theme.colors.primary}
-                                onValueChange={setSpeedRange}
-                                value={speedRange}
-                                step={1}
-                            />
-                            <Button mode="contained" onPress={() => handleSendCommand(1, speedRange)}>
-                                Установить скорость
-                            </Button>
-                        </View>
-                        <Divider />
-                        <View style={styles.container}>
-                            <Text style={styles.text}>Запуск с интервалом: {intervalRange} сек</Text>
-                            <Slider
-                                style={{ height: 40 }}
-                                minimumValue={2}
-                                maximumValue={10}
-                                minimumTrackTintColor={theme.colors.primary}
-                                maximumTrackTintColor="#000000"
-                                thumbTintColor={theme.colors.primary}
-                                onValueChange={setIntervalRange}
-                                value={intervalRange}
-                                step={1}
-                            />
-                            <Button mode="contained" onPress={() => handleSendCommand(5, intervalRange)}>
-                                Запустить
-                            </Button>
-                            <Button mode="contained" onPress={() => handleSendCommand(6)}>
-                                Остановить
-                            </Button>
-                        </View>
-                        <Divider />
-                        <View style={styles.container}>
-                            <Button mode="contained" onPress={() => handleSendCommand(3)}>
-                                Одиночный выброс
-                            </Button>
-                        </View>
-                        <Divider />
-                        <View style={styles.container}>
-                            <Button mode="contained" onPress={() => handleSendCommand(8)}>
-                                Светодиод
-                            </Button>
-                        </View>
+                            <Divider />
+                            <View style={styles.container}>
+                                <Button mode="contained" onPress={() => handleSendCommand(3)}>
+                                    Одиночный выброс
+                                </Button>
+                            </View>
+                            <Divider />
+                            <View style={styles.container}>
+                                <Button mode="contained" onPress={() => handleSendCommand(8)}>
+                                    Светодиод
+                                </Button>
+                            </View>
 
-                    </> :
-                    <Loading minimal />}
+                        </> :
+                        <Loading minimal />}
+                <Text>{JSON.stringify(connectedDevice, null, 2)}</Text>
             </ScrollView>
         </View>
     );

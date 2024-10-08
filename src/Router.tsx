@@ -6,7 +6,7 @@ import StandScreen from './screens/Stand/StandScreen';
 
 export type RootStackParamList = {
     Settings: undefined;
-    Stand: IStand;
+    Stand: IStand | undefined;
 };
 
 export type NavigationScreenProps<T extends keyof RootStackParamList> = NativeStackScreenProps<RootStackParamList, T>;
