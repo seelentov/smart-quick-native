@@ -2,13 +2,13 @@ import { NavigationScreenProps } from '../../Router';
 import { Alert, Platform, ScrollView, StyleSheet, View } from 'react-native';
 import { baseStyles } from '../../styles/base.styles';
 import Header from '../../components/ui/Header/Header';
-import { useContext, useEffect, useMemo, useState } from 'react';
-import { Appbar, Button, Divider, Text } from 'react-native-paper';
+import { useEffect, useState } from 'react';
+import { Button, Divider, Text } from 'react-native-paper';
 import Slider from '@react-native-community/slider';
 import theme from '@config/theme';
 import Loading from '@components/ui/Loading/Loading';
 import useBLE from '@hooks//useBLE';
-import { DataContext } from '@components/providers/DataProvider';
+import { baseData } from '@components/providers/DataProvider';
 
 type StandScreenProps = NavigationScreenProps<"Stand">;
 
@@ -16,50 +16,30 @@ const CHARACTERISTIC_UUID = "89e2b429-2cd9-44d3-a169-2ec392e1c6f8";
 
 export default function StandScreen({ navigation, route }: StandScreenProps) {
 
-    const { data } = useContext(DataContext);
-
-    const [stand, setStand] = useState<IStand>(data[0])
+    const [stand, setStand] = useState<IStand>(baseData[1])
 
     useEffect(() => {
-        if (route?.params) {
-            setStand(route?.params)
-        } else if (data) {
-            setStand(data[0])
+        if (route?.params && JSON.stringify(route.params) !== JSON.stringify(stand)) {
+            setStand(route.params);
         }
-    }, [route, data])
+    }, [route, stand]);
 
-    const { requestPermissions, writeCharacteristicWithResponseForService, connectedDevice, scanAndConnectByService } = useBLE(stand?.id || "null", CHARACTERISTIC_UUID)
+
+    const { requestPermissions, writeCharacteristicWithResponseForService, connectedDevice, scanForNameToDeviceTemp, disconnectFromDevice, deviceTemp, scanAndConnectByService } = useBLE(stand.id, CHARACTERISTIC_UUID)
 
     const [intervalRange, setIntervalRange] = useState<number>(2)
     const [speedRange, setSpeedRange] = useState<number>(0)
 
-    const [connectionStatus, setConnectionStatus] = useState("Поиск...");
 
-    useEffect(() => {
-        if (stand) {
-            setConnectionStatus(stand.name)
-        }
-    }, [stand])
 
     useEffect(() => {
         const searchDevice = async () => {
             const isRequestPermissions = await requestPermissions();
 
             if (isRequestPermissions) {
-                setConnectionStatus("Поиск...")
-                await scanAndConnectByService()
-                    .then(() => {
-                        if (stand) {
-                            setConnectionStatus(stand.name)
-                        }
-                    })
-                    .catch(() => {
-                        Alert.alert("Ошибка", "Тренажер не подключен")
-                        setConnectionStatus("Ошибка")
-                    })
+                scanAndConnectByService()
             } else {
                 Alert.alert("Ошибка", "Ошибка при получении разрешений устройства")
-                setConnectionStatus("Ошибка")
             }
         }
 
@@ -73,16 +53,17 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
 
         const commandString = `${stand?.deviceid}${command}${attribute}3e7f6c`
 
-        writeCharacteristicWithResponseForService(String(commandString))
+        if (connectedDevice) {
+            writeCharacteristicWithResponseForService(connectedDevice, String(commandString), stand.id)
+        }
     }
 
     return (
         <View style={baseStyles.wrapper}>
-            <Header title={connectionStatus} navigation={navigation} />
+            <Header title={stand.name} navigation={navigation} />
             <ScrollView style={baseStyles.scrollView}>
                 {
                     connectedDevice
-                        // true
                         ?
                         <>
                             <View style={styles.container}>
@@ -150,7 +131,6 @@ export default function StandScreen({ navigation, route }: StandScreenProps) {
 
                         </> :
                         <Loading minimal />}
-                <Text>{JSON.stringify(connectedDevice, null, 2)}</Text>
             </ScrollView>
         </View>
     );

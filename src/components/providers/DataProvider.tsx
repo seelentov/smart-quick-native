@@ -53,9 +53,6 @@ export const DataProvider = ({ children }: PropsWithChildren) => {
       } else {
         setDataState(baseData)
       }
-
-      navigation.navigate("Stand", data[0]);
-
     }
 
     getDataFromLocalStorage()

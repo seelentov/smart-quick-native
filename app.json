@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Smart Quick",
-    "slug": "smartquiick",
+    "slug": "ssmartquick",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +19,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.vladislav_komkov",
+      "package": "com.komkov_pixelperfect",
       "versionCode": 2,
       "permissions": [
         "android.permission.BLUETOOTH",
@@ -32,7 +32,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "e22c986e-7341-4a34-bcaf-2a699bed6a43"
+        "projectId": "2b6555d5-a2cd-40a4-8cac-bb94e59761af"
       }
     },
     "plugins": [
